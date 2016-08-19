@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: vistek-onvif
+Version: 2.1.0
+Summary: onvif SDK wrap
+Home-page: UNKNOWN
+Author: lishida
+Author-email: shida23577@hotmail.com
+License: http://www.apache.org/licenses/LICENSE-2.0.html
+Platform: UNKNOWN
+Requires-Dist: onvif
+Requires-Dist: suds (>=0.4)
+Requires-Dist: suds-passworddigest
+Requires-Dist: urlobject
+
+UNKNOWN
+
+
