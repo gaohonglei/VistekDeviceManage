@@ -97,7 +97,7 @@ class DeviceDispatchServiceI(v_device.DeviceDispatchServiceV1):
     def PushDeviceStreamInfos(self, urls, c):
         if self._push_proxy:
             try:
-                logging.info("{0}".format(urls))
+                logger.info("{0}".format(urls))
                 self._push_proxy.PushDeviceStreamInfos(urls)
                 return 0
             except:

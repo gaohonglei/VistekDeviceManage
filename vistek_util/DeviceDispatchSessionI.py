@@ -57,7 +57,13 @@ class DeviceDispatchSessionI(v_device.DeviceDispatchSession):
             return list(self._device_list.values())
 
     def UpdateDeviceList(self, list, current=None):
-        return 0
+        if self._push_session:
+            try:
+                self._push_session.UpdateDeviceList(list)
+                return 0
+            except Exception,ex:
+                logger.info("Exception:{0}".format(ex))
+        return 1
 
     def KeepAlive(self, c):
         self._lock.acquire()

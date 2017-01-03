@@ -55,7 +55,7 @@ class uri_parser():
             self.params.pop(name)
         return self.params
 
-@functionTools.timelimited(5)
+#@functionTools.timelimited(5)
 def try_process_device(device):
     try:
         func = getattr(onvif_wrap, "try_get_device_info")
@@ -71,7 +71,7 @@ def try_process_device(device):
         return None
 
 def getStatusQueue():
-    return onvif_wrap.get_status_queue()
+    return onvif_global_value.get_device_status_queue()
 
 def request_cmd(device_id, uri, params):
     """device cmd"""
